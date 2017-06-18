@@ -1,0 +1,54 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.gblw.uipractice"
+          android:versionCode="1"
+          android:versionName="1.0" >
+
+    <uses-sdk android:minSdkVersion="21"
+              android:targetSdkVersion="23" />
+
+    <application
+            android:allowBackup="true"
+            android:icon="@mipmap/ic_launcher"
+            android:label="@string/app_name"
+            android:supportsRtl="true"
+            android:theme="@style/AppTheme">
+
+          <!--  <activity android:name=".FirstActivity"
+                      android:label="This is FirstActivity" >
+
+                <intent-filter>
+                    <action android:name="android.intent.action.MAIN" />
+                    <category android:name="android.intent.category.LAUNCHER" />
+                </intent-filter>
+            </activity>-->
+
+            <activity android:name=".SecondActivity"
+                      android:label="Second Activity Title">
+
+                <intent-filter>
+                    <action android:name="com.gblw.uipractice.SecondActivity_Start" />
+                    <category android:name="android.intent.category.DEFAULT" />
+                    <category android:name="com.gblw.uipractice.my_category" />`
+                </intent-filter>
+            </activity>
+
+        <!--  activity lifeCycle  begin -->
+        <activity android:name=".LifeCycle.ActivityLifeCycle">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"></action>
+                <category android:name="android.intent.category.LAUNCHER"></category>
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".LifeCycle.NormalActivity">
+
+        </activity>
+
+        <activity android:name=".LifeCycle.DialogActivity" android:theme="@style/ThemeOverlay.AppCompat.Dialog">
+
+        </activity>
+
+        <!--  activity lifeCycle  end -->
+
+    </application>
+</manifest>
